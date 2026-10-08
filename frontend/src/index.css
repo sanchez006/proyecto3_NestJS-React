@@ -1,0 +1,64 @@
+:root {
+  --bg: #f3f4f7;
+  --surface: #ffffff;
+  --text: #1c1f2b;
+  --muted: #5c6172;
+  --border: #d8dbe4;
+  --accent: #c2410c;
+  --accent-dark: #9a3412;
+  --focus: #2563eb;
+  --success-bg: #ecfdf3;
+  --success: #166534;
+  --error-bg: #fef2f2;
+  --error: #b91c1c;
+  --editing: #fff7ed;
+
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121419;
+    --surface: #1c1f27;
+    --text: #e9ebf2;
+    --muted: #a0a5b6;
+    --border: #343846;
+    --accent: #f97316;
+    --accent-dark: #ea580c;
+    --focus: #60a5fa;
+    --success-bg: #0f2a1b;
+    --success: #4ade80;
+    --error-bg: #2d1416;
+    --error: #f87171;
+    --editing: #2a1d12;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
